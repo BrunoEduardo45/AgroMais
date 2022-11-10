@@ -19,7 +19,7 @@ body{
     width: 20%;
 }
 #top{
-    height: 85%
+    height: 85%;
 }
 #imgPerfil{
     border-radius: 100%; 
@@ -33,17 +33,18 @@ body{
     color:#fff;
 }
 #btn-menu{
-    margin: 10px; 
+    margin: 20px; 
     width: 100%; 
     border: none; 
-    border-radius: 20px; 
-    padding: 10px; 
-    background-color: #5d7d48; 
+    border-radius: 50px; 
+    padding: 15px 30px; 
+    background-color: #375723; 
     color: #fff; 
     font-size: 20px;
+    display: flex;
 }
 #btn-menu:hover{
-    background-color: #324e20; 
+    background-color: #273d19; 
 }
 #btn-sair{
     margin: 10px; 
