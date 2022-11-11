@@ -22,10 +22,10 @@
             <h2 style="color: #C3D343; margin-top: -25px;">Gerente</h2>
 
             <nav>
-                <button id="btn-menu"><i class="fa fa-home fa-lg"></i> Serviços</button>
-                <button id="btn-menu"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Clientes </button>
-                <button id="btn-menu"><i class="fa fa-cog fa-lg" aria-hidden="true"></i> Atualizar Perfil</button>
-                <button id="btn-sair"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Sair</button>
+                <a id="btn-menu"><i class="fa fa-home fa-lg"></i> Serviços</a>
+                <a id="btn-menu"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Clientes </a>
+                <a id="btn-menu"><i class="fa fa-cog fa-lg" aria-hidden="true"></i> Atualizar Perfil</a>
+                <a id="btn-sair"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Sair</a>
             </nav>
         </div>
 
@@ -40,13 +40,126 @@
                 <h3>Lista de Serviços em aberto</h2>
                     <div id="div-btn-add">
                         <p>Adcionar serviço</p>
-                        <button id="btn-add"><i class="fa fa-plus fa-lg"></i></button>
+                        <a id="btn-add"><i class="fa fa-plus fa-lg"></i></a>
                     </div>
             </div>
         </div>
         <div id="container">
             <div id="lista">
-                ...
+                <table class="table" id="topo-tabela"> 
+                    <thead>
+                        <tr>
+                            <th class="col-md-3">Cliente</th>
+                            <th class="col-md-3">Serviço</th>
+                            <th class="col-md-2">Status</th>
+                            <th class="col-md-2">Data do cadastro</th>
+                            <th class="col-md-2">#</th>
+                        </tr>
+                    </thead>
+                </table>
+                <table class="table">
+                    <tbody>
+                        <tr style="text-align: center;">
+                          <th class="col-md-3 texto-lista">Bruno Eduardo</th>
+                          <td class="col-md-3 texto-lista">Emprestimo rural</td>
+                          <td class="col-md-2 texto-lista">Em aberto</td>
+                          <td class="col-md-2 texto-lista">10/11/2022</td>
+                          <td class="col-md-2">
+                              <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                              <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
+                              <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
+                          </td>
+                        </tr>
+                        <tr style="text-align: center;">
+                          <th class="col-md-3 texto-lista">Bruno Eduardo</th>
+                          <td class="col-md-3 texto-lista">Emprestimo rural</td>
+                          <td class="col-md-2 texto-lista">Em aberto</td>
+                          <td class="col-md-2 texto-lista">10/11/2022</td>
+                          <td class="col-md-2">
+                              <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                              <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
+                              <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
+                          </td>
+                        </tr>
+                        <tr style="text-align: center;">
+                          <th class="col-md-3 texto-lista">Bruno Eduardo</th>
+                          <td class="col-md-3 texto-lista">Emprestimo rural</td>
+                          <td class="col-md-2 texto-lista">Em aberto</td>
+                          <td class="col-md-2 texto-lista">10/11/2022</td>
+                          <td class="col-md-2">
+                              <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                              <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
+                              <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
+                          </td>
+                        </tr>
+                        <tr style="text-align: center;">
+                          <th class="col-md-3 texto-lista">Bruno Eduardo</th>
+                          <td class="col-md-3 texto-lista">Emprestimo rural</td>
+                          <td class="col-md-2 texto-lista">Em aberto</td>
+                          <td class="col-md-2 texto-lista">10/11/2022</td>
+                          <td class="col-md-2">
+                              <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                              <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
+                              <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
+                          </td>
+                        </tr>
+                        <tr style="text-align: center;">
+                          <th class="col-md-3 texto-lista">Bruno Eduardo</th>
+                          <td class="col-md-3 texto-lista">Emprestimo rural</td>
+                          <td class="col-md-2 texto-lista">Em aberto</td>
+                          <td class="col-md-2 texto-lista">10/11/2022</td>
+                          <td class="col-md-2">
+                              <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                              <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
+                              <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
+                          </td>
+                        </tr>
+                        <tr style="text-align: center;">
+                          <th class="col-md-3 texto-lista">Bruno Eduardo</th>
+                          <td class="col-md-3 texto-lista">Emprestimo rural</td>
+                          <td class="col-md-2 texto-lista">Em aberto</td>
+                          <td class="col-md-2 texto-lista">10/11/2022</td>
+                          <td class="col-md-2">
+                              <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                              <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
+                              <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
+                          </td>
+                        </tr>
+                        <tr style="text-align: center;">
+                          <th class="col-md-3 texto-lista">Bruno Eduardo</th>
+                          <td class="col-md-3 texto-lista">Emprestimo rural</td>
+                          <td class="col-md-2 texto-lista">Em aberto</td>
+                          <td class="col-md-2 texto-lista">10/11/2022</td>
+                          <td class="col-md-2">
+                              <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                              <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
+                              <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
+                          </td>
+                        </tr>
+                        <tr style="text-align: center;">
+                          <th class="col-md-3 texto-lista">Bruno Eduardo</th>
+                          <td class="col-md-3 texto-lista">Emprestimo rural</td>
+                          <td class="col-md-2 texto-lista">Em aberto</td>
+                          <td class="col-md-2 texto-lista">10/11/2022</td>
+                          <td class="col-md-2">
+                              <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                              <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
+                              <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
+                          </td>
+                        </tr>
+                        <tr style="text-align: center;">
+                          <th class="col-md-3 texto-lista">Bruno Eduardo</th>
+                          <td class="col-md-3 texto-lista">Emprestimo rural</td>
+                          <td class="col-md-2 texto-lista">Em aberto</td>
+                          <td class="col-md-2 texto-lista">10/11/2022</td>
+                          <td class="col-md-2">
+                              <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                              <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
+                              <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                </table>
             </div>
         </div>
     </div>
