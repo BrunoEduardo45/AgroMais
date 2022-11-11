@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="style/style.css?v=1">
 
+    <script src="assets/Jquery/jquery-3.6.1.js"></script>
+
     <title>Agro+</title>
 </head>
 <body>
@@ -25,7 +27,7 @@
                 <a id="btn-menu" href="dashboard.html"><i class="fa fa-home fa-lg"></i> Serviços</a>
                 <a id="btn-menu" href="clientes.html"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Clientes </a>
                 <a id="btn-menu" href="configuracao.html"><i class="fa fa-cog fa-lg" aria-hidden="true"></i> Atualizar Perfil</a>
-                <a id="btn-sair"  href="index.html"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Sair</a>
+                <a id="btn-sair" href="index.html"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Sair</a>
             </nav>
         </div>
 
@@ -37,10 +39,10 @@
     <div id="conteudo">
         <div id="header">
             <div id="topo">
-                <h3><i class="fa fa-bars"></i>Lista de Serviços em aberto</h2>
+                <h3><i class="fa fa-bars" style="margin-right: 10px;"></i>Lista de Serviços em aberto</h2>
                     <div id="div-btn-add">
                         <p>Adcionar serviço</p>
-                        <a id="btn-add"><i class="fa fa-plus"></i></a>
+                        <button type="button" id="btn-add" data-toggle="modal" data-target="#ExemploModalCentralizado"><i class="fa fa-plus"></i></button>
                     </div>
             </div>
         </div>
@@ -59,34 +61,6 @@
                 </table>
                 <table class="table">
                     <tbody>
-                        <tr style="text-align: center;">
-                            <th class="col-md-3 texto-lista">Bruno Eduardo</th>
-                            <td class="col-md-4 texto-lista">Emprestimo rural</td>
-                            <td class="col-md-1 texto-lista"> 
-                                <p class="aberto">A fazer</p>
-                            </td>
-                            <td class="col-md-2 texto-lista">10/11/2022</td>
-                            <td class="col-md-2">
-                                <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
-                                <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
-                                <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-
-                        <tr style="text-align: center;">
-                            <th class="col-md-3 texto-lista">Bruno Eduardo</th>
-                            <td class="col-md-4 texto-lista">Emprestimo rural</td>
-                            <td class="col-md-1 texto-lista"> 
-                                <p class="andamento">Fazendo</p>
-                            </td>                            
-                            <td class="col-md-2 texto-lista">10/11/2022</td>
-                            <td class="col-md-2">
-                                <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
-                                <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
-                                <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
-                            </td>
-                          </tr>
-
                           <tr style="text-align: center;">
                             <th class="col-md-3 texto-lista">Bruno Eduardo</th>
                             <td class="col-md-4 texto-lista">Emprestimo rural</td>
@@ -95,7 +69,7 @@
                             </td>                            
                             <td class="col-md-2 texto-lista">10/11/2022</td>
                             <td class="col-md-2">
-                                <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                                <button class="btn btn-primary btn-lista" onclick="abrirModal()"><i class="fa fa-search"></i></a>
                                 <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
                                 <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
                             </td>
@@ -106,8 +80,47 @@
         </div>
     </div>
 
+    <div id="modal">
+        <div id="conteudo-modal">
+            <div class="btn-modal" style="text-align: right;">
+                <button class="btn btn-danger close" onclick="fecharModal()" ><i class="fa fa-close"></i></button>
+            </div>
+            <div id="info-modal" class="conteudo">
+                <h2 class="titulo-modal">Detalhes do Serviço</h2>
+                <p><b>Nome: </b>Bruno Eduardo</p>
+                <p><b>Tipo de serviço: </b>Descrição do serviço</p>
+                <p><b>Status: </b>Em aberto</p>
+                <p><b>Propriedade: </b>Nome da propriedade</p>
+                <br>
+                <p><b>Complemento</b></p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem culpa quia, rerum sed ullam magni, placeat quae facilis inventore molestiae soluta nihil, cum voluptate! Nemo, quia mollitia? Provident, consequuntur tempore.</p>
+                <br>
+                <p><b>Valor: </b>R$1.000,00</p>
+                <p><b>Tipo: </b>Débito</p>
+                <p><b>Status do pagamento: </b>Pago</p>
+                <br>
+                <br>
+            </div>
+            <div class="btn-modal" style="text-align: center;">
+                <button class="btn btn-success" onclick="window.print()"><i class="fa fa-print"></i></button>
+                <p>Imprimir</p>
+            </div>
+        </div>
+    </div>
+
+
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+<script>
+    function fecharModal(){
+        $('#modal').removeClass('d-flex');
+        $('#modal').addClass('d-none');
+    };
+    function abrirModal(){
+        $('#modal').removeClass('d-none');
+        $('#modal').addClass('d-flex');
+    };
+</script>
 </body>
 </html>

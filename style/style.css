@@ -6,10 +6,10 @@ body{
     box-sizing: border-box; 
     display: flex;
     background-color: rgb(215, 215, 215); 
-
 }
+
 #sidebar{
-    background-color: #000; 
+    background-color: #3F6128; 
     padding: 30px; 
     text-align: center; 
     border-radius: 0px 50px 50px 0px; 
@@ -167,6 +167,50 @@ table{
     background-color: #C3D343;
 }
 .concluido{
-    background-color: #5d7d48;
+    background-color: rgb(93, 125, 72);
     color:#fff;
 }
+#modal{
+    background-color: rgba(34, 59, 17, 0.8);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#conteudo-modal{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 30px;
+    width: 500px;
+    box-shadow: 0px 0px 30px #1f3c0c;
+}
+.close{
+    border-radius: 100%;
+}
+.titulo-modal{
+    color: #324e20;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#info-modal p{
+    margin-bottom: 0px;
+}
+@media print {
+    /* esconder tudo */
+    body * {
+      visibility: hidden;
+    }
+    /* exibir somente o que tem na div para imprimir */
+    #info-modal, #info-modal * {
+      visibility: visible;
+    }
+    #info-modal {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    
+  }
