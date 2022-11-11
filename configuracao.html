@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style/style.css">
+
+    <title>Agro+</title>
+</head>
+<body>
+    <div id="sidebar">
+        <div id="top">
+            <img id="imgPerfil" src="assets/img/me.jpg" alt="foto_perfil">
+
+            <h2>Bem vindo!</h2>
+            <h2 style="color: #C3D343; margin-top: -25px;">Gerente</h2>
+
+            <nav>
+                <a id="btn-menu" href="dashboard.html"><i class="fa fa-home fa-lg"></i> Serviços</a>
+                <a id="btn-menu" href="clientes.html"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Clientes </a>
+                <a id="btn-menu" href="configuracao.html"><i class="fa fa-cog fa-lg" aria-hidden="true"></i> Atualizar Perfil</a>
+                <a id="btn-sair"  href="index.html"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Sair</a>
+            </nav>
+        </div>
+
+        <div id="bottom">
+            <img src="assets/img/logo.png" alt="logo_empresa" width="70%">
+        </div>
+    </div>
+
+    <div id="conteudo">
+        <div id="header">
+            <div id="topo">
+                <h3>Lista de Serviços em aberto</h2>
+                    <div id="div-btn-add">
+                        <p>Adcionar serviço</p>
+                        <a id="btn-add"><i class="fa fa-plus fa-lg"></i></a>
+                    </div>
+            </div>
+        </div>
+        <div id="container">
+            <div id="lista">
+                <table class="table" id="topo-tabela"> 
+                    <thead>
+                        <tr>
+                            <th class="col-md-3">Cliente</th>
+                            <th class="col-md-4">Serviço</th>
+                            <th class="col-md-1">Status</th>
+                            <th class="col-md-2">Data do cadastro</th>
+                            <th class="col-md-2"></th>
+                        </tr>
+                    </thead>
+                </table>
+                <table class="table">
+                    <tbody>
+                        <tr style="text-align: center;">
+                            <th class="col-md-3 texto-lista">Bruno Eduardo</th>
+                            <td class="col-md-4 texto-lista">Emprestimo rural</td>
+                            <td class="col-md-1 texto-lista"> 
+                                <p class="aberto">A fazer</p>
+                            </td>
+                            <td class="col-md-2 texto-lista">10/11/2022</td>
+                            <td class="col-md-2">
+                                <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                                <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
+                                <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+
+                        <tr style="text-align: center;">
+                            <th class="col-md-3 texto-lista">Bruno Eduardo</th>
+                            <td class="col-md-4 texto-lista">Emprestimo rural</td>
+                            <td class="col-md-1 texto-lista"> 
+                                <p class="andamento">Fazendo</p>
+                            </td>                            
+                            <td class="col-md-2 texto-lista">10/11/2022</td>
+                            <td class="col-md-2">
+                                <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                                <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
+                                <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
+                            </td>
+                          </tr>
+
+                          <tr style="text-align: center;">
+                            <th class="col-md-3 texto-lista">Bruno Eduardo</th>
+                            <td class="col-md-4 texto-lista">Emprestimo rural</td>
+                            <td class="col-md-1 texto-lista"> 
+                                <p class="concluido">Feito</p>
+                            </td>                            
+                            <td class="col-md-2 texto-lista">10/11/2022</td>
+                            <td class="col-md-2">
+                                <button class="btn btn-primary btn-lista" ><i class="fa fa-search"></i></a>
+                                <button class="btn btn-warning btn-lista" ><i class="fa fa-pencil" style="color: #fff;"></i></a>
+                                <button class="btn btn-danger btn-lista" ><i class="fa fa-trash"></i></a>
+                            </td>
+                          </tr>
+                      </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
