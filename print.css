@@ -1,0 +1,38 @@
+/* CSS para impressão */
+ @media print {
+
+    .modal {
+        display: block;
+    }
+    .modal-content{
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: none;
+        width: 100%;
+        padding: 2cm;
+        margin-top: 50px;
+        margin-bottom:80px;
+        float: none !important;
+    }
+    .exemplo{
+        page-break-before: always;
+    }
+    img {
+        max-width: 100%;
+    }
+    #topo-modal{
+        top: 0;
+    }    
+    #base-modal{
+        bottom: 0;
+        position: absolute;
+    }
+    .print {
+        display:block;
+    }
+    .no-print {
+        display:none;
+    }
+    .print-block {
+        display: block !important;
+    }
+} 
